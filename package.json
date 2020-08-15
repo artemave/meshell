@@ -1,6 +1,20 @@
 {
   "name": "meshell",
   "version": "2.0.0",
+  "description": "Dead simple shell commands from Node",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artemave/meshell.git"
+  },
+  "homepage": "http://github.com/artemave/meshell",
+  "keywords": [
+    "child_process",
+    "bash",
+    "unix",
+    "shell",
+    "promise",
+    "async"
+  ],
   "main": "index.js",
   "license": "MIT",
   "scripts": {
