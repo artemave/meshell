@@ -19,7 +19,7 @@ const Shell = require('meshell')
 const sh = new Shell()
 const output = await sh('ls -la')
 
-// start in particular directory (default to process.cwd())
+// start in a particular directory (default to process.cwd())
 const sh = new Shell({cwd: '/some/dir'})
 
 // change it later
