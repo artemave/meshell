@@ -1,4 +1,4 @@
-# Meshell
+# Meshell [![Codeship Status for artemave/meshell](https://app.codeship.com/projects/67c432b0-c170-0138-b9e8-32d294ba6a0d/status?branch=master)](https://app.codeship.com/projects/406031)
 
 Sacré bleu! Running shell commands from Node just can't get any simpler.
 
