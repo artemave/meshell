@@ -31,3 +31,7 @@ const pid = await sh('sleep 10', {bg: true})
 // collect output as it comes
 await sh('git push heroku master', {outputStream: process.stdout})
 ```
+
+Print all commands and their output to console:
+
+    DEBUG=meshell node myScript.js
