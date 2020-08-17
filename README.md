@@ -25,7 +25,7 @@ const sh = new Shell({cwd: '/some/dir'})
 // change it later
 sh.cd('../test')
 
-// background process; returns instead of output; does not wait for the process to complete
+// background process; returns pid instead of output; does not wait for the process to complete
 const pid = await sh('sleep 10', {bg: true})
 
 // collect output as it comes
