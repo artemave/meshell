@@ -21,7 +21,9 @@
     "test": "donc"
   },
   "devDependencies": {
-    "debug": "^4.1.1",
     "donc": "^1.3.1"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
   }
 }
