@@ -1,6 +1,6 @@
 {
   "name": "meshell",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Dead simple shell commands from Node",
   "repository": {
     "type": "git",
