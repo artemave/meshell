@@ -1,0 +1,15 @@
+{
+  "include": ["index.js", "test/**/*"],
+  "compilerOptions": {
+    "incremental": true,
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["ES2015"],
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

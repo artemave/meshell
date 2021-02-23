@@ -1,8 +1,8 @@
 let g:vigun_commands = [
       \ {
-      \   'pattern': 'test/.*Test.js$',
-      \   'normal': './node_modules/.bin/donc',
+      \   'pattern': 'test/.*Test.ts$',
+      \   'normal': 'yarn test',
       \   'currentTestStrategy': 'line_number',
-      \   'debug': './node_modules/.bin/donc --inspect-brk',
+      \   'debug': 'yarn test --inspect-brk',
       \ }
       \]

@@ -1,8 +1,8 @@
-const {Writable} = require('stream')
-const {it, beforeEach} = require('donc')
-const Shell = require('..')
-const assert = require('assert')
-const fs = require('fs')
+import {Writable} from 'stream'
+import {it, beforeEach} from 'donc'
+import Shell from '..'
+import assert from 'assert'
+import fs from 'fs'
 
 it('runs a shell command in a current directory', async function() {
   const sh = new Shell()
@@ -37,7 +37,7 @@ it('can run in background', async function() {
   const sh = new Shell()
   const pid = await sh('sleep 1', {bg: true})
   assert.match(pid.toString(), /\d+/)
-  assert.match((await sh('ps')), new RegExp(pid))
+  assert.match((await sh('ps')), new RegExp(pid.toString()))
 })
 
 it('can change current directory', async function() {
@@ -59,7 +59,7 @@ it('can stream output to a reader', async function() {
   const res = await sh('ls test', {outputStream: writer})
 
   assert.ok(res.length === 0)
-  assert.match(actualOutput, new RegExp(__filename.split('/').pop()))
+  assert.match(actualOutput, new RegExp(__filename.split('/').pop() as string))
 })
 
 beforeEach(cleanup => {
