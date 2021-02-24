@@ -4,7 +4,7 @@ Sacré bleu! Running shell commands from Node just can't get any simpler.
 
 ## Why?
 
-I _always_ have to look up `child_process` whenever I need to run some shell command in Node. While this may be a good thing - I will learn something eventually - sometimes I just want to run the freaking thing.
+I _always_ have to look up `child_process` whenever I need to run some shell command in Node. While this may be a good thing - I will learn something eventually - sometimes I just want to run the damn thing.
 
 This library offers a really really straitforward way to run shell commands. I dare you to not get it.
 
@@ -18,12 +18,6 @@ const Shell = require('meshell')
 
 const sh = new Shell()
 
-// start in a particular directory (defaults to process.cwd())
-const sh = new Shell({cwd: '/some/dir'})
-
-// change it later
-sh.cd('../test')
-
 // output is both stdout and stderr
 const output = await sh('ls -la')
 
@@ -35,6 +29,12 @@ await sh('git push heroku master', {outputStream: process.stdout})
 
 // throws on exit code > 0
 await sh('cat /does/not/exist')
+
+// start in a particular directory (defaults to process.cwd())
+const sh = new Shell({cwd: '/some/dir'})
+
+// change it later
+sh.cd('../test')
 ```
 
 Print all commands and their output to console:
