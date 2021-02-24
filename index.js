@@ -44,7 +44,7 @@ module.exports = class Shell extends Function {
         } else {
           sp.on('close', code => {
             if (code === 0) {
-              resolve(output.trim())
+              resolve(outputStream ? undefined : output.trim())
             } else {
               const error = new Error(stderr.trim())
               error.code = code

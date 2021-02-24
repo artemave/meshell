@@ -58,7 +58,7 @@ it('can stream output to a reader', async function() {
   const sh = new Shell()
   const res = await sh('ls test', {outputStream: writer})
 
-  assert.ok(res.length === 0)
+  assert.ok(res === undefined)
   assert.match(actualOutput, new RegExp(__filename.split('/').pop() as string))
 })
 
