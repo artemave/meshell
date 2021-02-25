@@ -35,6 +35,9 @@ const sh = new Shell({cwd: '/some/dir'})
 
 // change it later
 sh.cd('../test')
+
+// where are we?
+sh.cwd // => /some/test
 ```
 
 Print all commands and their output to console:
