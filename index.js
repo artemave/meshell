@@ -1,6 +1,9 @@
 const {spawn} = require('child_process')
 const path = require('path')
-const debug = require('debug')('meshell')
+let debug = () => {}
+try {
+  debug = require('debug')('meshell')
+} catch {}
 
 module.exports = class Shell extends Function {
   constructor ({cwd = process.cwd()} = {}) {
