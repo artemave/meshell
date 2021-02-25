@@ -9,7 +9,7 @@ interface MeshellFn extends Function {
 }
 
 interface MeshellConstructor {
-  new({ cwd }?: { cwd?: string | undefined }): MeshellFn
+  new({ cwd }?: { cwd?: string }): MeshellFn
 }
 
 declare var Meshell: MeshellConstructor
