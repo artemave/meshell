@@ -28,8 +28,7 @@ it('fails when exit code != 0', async function() {
     await sh('test/fail.sh')
   } catch (e) {
     assert.equal(e.code, 2)
-    assert.equal(e.message, "ls: cannot access 'asdf': No such file or directory")
-    assert.equal(e.output, "hello\nls: cannot access 'asdf': No such file or directory")
+    assert.equal(e.message, "hello\nls: cannot access 'asdf': No such file or directory")
   }
 })
 

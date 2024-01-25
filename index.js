@@ -49,9 +49,8 @@ module.exports = class Shell extends Function {
             if (code === 0) {
               resolve(outputStream ? undefined : output.trim())
             } else {
-              const error = new Error(stderr.trim())
+              const error = new Error(output.trim())
               error.code = code
-              error.output = output.trim()
               reject(error)
             }
           })
